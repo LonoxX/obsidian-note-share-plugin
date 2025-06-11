@@ -1,11 +1,14 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+  "id": "obsidian-note-share",
+  "name": "Secure Note Share",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Share your Obsidian notes securely and encrypted via unique links",
+  "author": "LonoxX",
+  "authorUrl": "https://github.com/LonoxX",
+  "isDesktopOnly": false,
+  "fundingUrl": {
+    "GitHub Sponsor": "https://github.com/sponsors/LonoxX",
+    "Ko-fi": "https://ko-fi.com/LonoxX"
+  }
 }

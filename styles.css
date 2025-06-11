@@ -1,8 +1,126 @@
-/*
+/* Secure Note Share Plugin Styles */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.secure-note-share-modal {
+    max-width: 600px;
+}
 
-If your plugin does not need CSS, delete this file.
+.share-result-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 8px;
+    background: var(--background-secondary);
+}
 
-*/
+.share-result-container h3 {
+    margin-top: 0;
+    color: var(--text-accent);
+}
+
+.share-input-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.share-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-family: var(--font-monospace);
+    font-size: 0.9em;
+}
+
+.share-copy-button {
+    padding: 8px 16px;
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.share-copy-button:hover {
+    background: var(--interactive-accent-hover);
+}
+
+.share-copy-button:active {
+    transform: translateY(1px);
+}
+
+.share-warning {
+    background: var(--background-modifier-error-rgb);
+    color: var(--text-error);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 4px solid var(--text-error);
+}
+
+.share-info {
+    background: var(--background-modifier-success-rgb);
+    color: var(--text-success);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 15px 0;
+    border-left: 4px solid var(--text-success);
+}
+
+.share-options-grid {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.share-button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.share-button-primary {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.share-button-primary:hover {
+    background: var(--interactive-accent-hover);
+}
+
+.share-button-secondary {
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    padding: 10px 20px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.share-button-secondary:hover {
+    background: var(--background-secondary-alt);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .share-input-container {
+        flex-direction: column;
+    }
+
+    .share-copy-button {
+        width: 100%;
+    }
+
+    .share-button-container {
+        flex-direction: column;
+    }
+}
