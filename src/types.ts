@@ -4,7 +4,7 @@ export interface SecureNoteShareSettings {
 }
 
 export const DEFAULT_SETTINGS: SecureNoteShareSettings = {
-  serverUrl: 'http://localhost:3000',
+  serverUrl: 'https://note.pnnet.dev',
   defaultTtlMinutes: 60
 };
 
