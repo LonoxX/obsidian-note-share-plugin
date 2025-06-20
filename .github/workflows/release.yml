@@ -61,9 +61,9 @@ jobs:
 
       - name: Verify build artifacts
         run: |
-          test -f dist/main.js
-          test -f dist/manifest.json
-          test -f dist/styles.css
+          test -fbuild/main.js
+          test -fbuild/manifest.json
+          test -fbuild/styles.css
 
       - name: Commit and push version changes
         env:
@@ -97,6 +97,6 @@ jobs:
             --title "$NEW_VERSION" \
             --notes "Automated release $NEW_VERSION" \
             --latest \
-            dist/main.js \
-            dist/manifest.json \
-            dist/styles.css
+           build/main.js \
+           build/manifest.json \
+           build/styles.css
