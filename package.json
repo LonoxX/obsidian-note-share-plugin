@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
-    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production && npm run copy-files",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
     "copy-files": "node copy-build.mjs",
     "version": "node version-bump.mjs && git add manifest.json versions.json"
   },
@@ -16,13 +16,13 @@
     "sharing",
     "security"
   ],
-  "author": "Your Name",
+	"author": "LonoxX",
   "license": "MIT",
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
-    "@types/node": "^24.0.1",
-    "@typescript-eslint/eslint-plugin": "8.34.0",
-    "@typescript-eslint/parser": "8.34.0",
+    "@types/node": "^24.0.3",
+    "@typescript-eslint/eslint-plugin": "8.34.1",
+    "@typescript-eslint/parser": "8.34.1",
     "builtin-modules": "5.0.0",
     "esbuild": "0.25.5",
     "obsidian": "latest",
