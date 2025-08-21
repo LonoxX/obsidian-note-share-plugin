@@ -221,10 +221,14 @@ export default class SecureNoteSharePlugin extends Plugin {
         const f = this.app.vault.getAbstractFileByPath(p);
         if (f instanceof TFile) { file = f; break; }
       }
-      // If not found, search the entire vault for a matching filename
+      // If not found, search the entire vault for all matching filenames
       if (!file) {
         const allFiles = this.app.vault.getFiles();
-        file = allFiles.find(f => f.name === fileName) || null;
+        const matches = allFiles.filter(f => f.name === fileName);
+        if (matches.length > 1) {
+          console.warn(`[SecureNoteShare] Multiple files named '${fileName}' found. Using first match: ${matches[0].path}`);
+        }
+        file = matches[0] || null;
       }
       if (file) {
         // Read binary data and convert to base64
