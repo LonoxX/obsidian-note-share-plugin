@@ -1,11 +1,11 @@
 {
   "name": "obsidian-secure-note-share",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Secure Note Share Plugin for Obsidian",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
     "copy-files": "node copy-build.mjs",
     "version": "node version-bump.mjs && git add manifest.json versions.json"
   },
@@ -16,7 +16,7 @@
     "sharing",
     "security"
   ],
-	"author": "LonoxX",
+  "author": "LonoxX",
   "license": "MIT",
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
