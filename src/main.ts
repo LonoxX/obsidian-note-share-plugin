@@ -221,6 +221,11 @@ export default class SecureNoteSharePlugin extends Plugin {
         const f = this.app.vault.getAbstractFileByPath(p);
         if (f instanceof TFile) { file = f; break; }
       }
+      // If not found, search the entire vault for a matching filename
+      if (!file) {
+        const allFiles = this.app.vault.getFiles();
+        file = allFiles.find(f => f.name === fileName) || null;
+      }
       if (file) {
         // Read binary data and convert to base64
         const arrayBuffer = await this.app.vault.readBinary(file as any);
